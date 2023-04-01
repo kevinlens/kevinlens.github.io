@@ -2,3 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+
+}
+
+#button {
+  display: inline-block;
+  background-color:#ffc048;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+a.button1 {
+  display: inline-block;
+  padding: 3.5px 15px 3.5px 15px;
+  margin: 10px 0.3em 0.3em 0;
+  border: 1.9px solid #3e3e56;
+  border-radius: 1.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+
+  background-color: #ffd387;
+  font-weight: bold;
+  color:#3f3d56;
+  text-align: center;
+  transition: all 0.2s;
+}
+a.button1:hover {
+  color: white;
+  background-color:  #8f8e8c;
+}

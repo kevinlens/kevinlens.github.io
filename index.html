@@ -1,19 +1,671 @@
-
 <!-- Note! If you ever just want to create quick and simple html boilerplate
 just enter: (! + tab) -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="css/output.css">
-  <title>Portfolio Page</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <h1 class="text-3xl text-green-200">Hello World</h1>
+    <link rel="stylesheet" href="css/output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <title>Portfolio Page</title>
+  </head>
+  <body class="text-[#3f3d56]">
+    <a id="button"></a>
+    <main>
+      <!-- * HERO SECTION -->
+      <!-- * --------------------------------------------- * -->
+      <!-- * --------------------------------------------- * -->
+      <!-- * --------------------------------------------- * -->
+      <section class="1xl:pl-10 -xmd:pl-0 1xl:pr-6 lxl:pr-0 bg-[#c8f2aa] h-screen">
+        <!-- /*  Structure that can contains more than one element(A firewall to prevent unwanted interactions) */
+        /* The goal of this entire structure 'container' is to keep it all of its content elements WITHIN a max-widith of 1400px 
+        even when the browser is stretched out, all of its content remains at the center. Also to add 8% padding to both left and right*/ -->
+        <div class="max-w-[1300px] mx-auto xmd:px-[5%]">
+          <nav>
+            <ul class="xmd:flex pt-10 -lg:text-[15px] -xmd:pl-4 text-[16.5px] uppercase">
+              <li class="mr-4 -xmd:mb-2 -xmd:ml-4">
+                <a href="#about">About</a>
+              </li>
+
+              <li class="mx-4 -xmd:mb-2">
+                <a href="#projects">Projects</a>
+              </li>
+
+              <!-- <li class="mx-4 -xmd:mb-2">
+                <a href="#skills">Skills</a>
+              </li> -->
+
+              <li class="mx-4 -xmd:mb-2">
+                <a href="mailto:kevinmt191919@gmail.com"> Contact </a>
+              </li>
+              <li class="mx-4 xmd:flex items-center">
+                <a
+                  class="flex items-center"
+                  href="https://drive.google.com/file/d/1vpRL18cw5adJ9GMlPQNgPm17FgvPSF08/view?usp=sharing"
+                >
+                  Resume
+                </a>
+                <i class="fas fa-download pl-2 -xmd:pl-5"> </i>
+              </li>
+            </ul>
+          </nav>
+
+          <header class="xmd:pt-44 xmd:flex justify-between max-w-[1250px] -xmd:overflow-hidden">
+
+            <!-- * Only Appear When Screen is of Small Size -->
+            <div class="w-[540px] -sm:-ml-14 mx-auto xmd:hidden">
+              <img
+                class="max-w-[540px] -1xl:ml-4"
+                src="./images/for-web.png"
+                alt="CCM Logo"
+              />
+            </div>
+
+            <!-- * Left-Side Info -->
+            <div class="max-w-md -xmd:mx-auto -1xl:ml-4">
+              <h1 class="text-6xl xmd:mb-6 -xmd:mt-2 -xmd:mb-4 -xmd:font-light -xmd:text-5xl -xmd:text-center -lg:text-5xl">Kevin T.</h1>
+              <p class="text-[29px] leading-[33px] -lg:text-2xl -lg:tracking-[.55px] -xmd:text-center" style="word-spacing:/images/for-web.png 5px">
+                Hey there! I'm Kevin, a software engineer specializing in
+                frontend development
+              </p>
+              <div>
+                <ul class="flex mt-8 -xmd:justify-center">
+
+                  <li class="xmd:w-[35px] -xmd:w-[28px] mr-[22px]">
+                    <a
+                      href="https://github.com/kevinlens"
+                      aria-label="Go to my github profile"
+                    >
+                      <svg
+                        class="fill-[#3f3d56]"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-labelledby="githubTitle"
+                      >
+                        <path
+                          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="xmd:w-[35px] -xmd:w-[28px] mr-5">
+                    <a
+                      href="mailto:kevinmt191919@gmail.com"
+                      aria-label="Send me an email"
+                    >
+                      <svg
+                        class="fill-[#3f3d56]"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-labelledby="gmailTitle"
+                      >
+                        <title id="gmailTitle">Gmail icon</title>
+                        <path
+                          d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+
+
+                  <li class="xmd:w-[35px] -xmd:w-[28px]">
+                    <a
+                      href="https://drive.google.com/file/d/1vpRL18cw5adJ9GMlPQNgPm17FgvPSF08/view?usp=sharing"
+                      download
+                    >
+                      <svg
+                        id="Layer_1"
+                        data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 128 128"
+                        class="fill-[#3f3d56]"
+                      >
+                        <defs>
+                          <style>
+                            .cls-1 {
+                              fill: #2d3e50;
+                            }
+                            .cls-2 {
+                              fill: #1d75b8;
+                            }
+                          </style>
+                        </defs>
+                        <path
+                          class="cls-1"
+                          d="M107.85862,1.9495h-65.678A4.582,4.582,0,0,0,38.91975,3.301L13.20025,29.02062a4.57286,4.57286,0,0,0-1.35156,3.26074v85.474a8.30572,8.30572,0,0,0,8.29766,8.29511h87.71227a8.30306,8.30306,0,0,0,8.29268-8.29511V10.24716A8.30532,8.30532,0,0,0,107.85862,1.9495Zm-.932,86.46872v28.41023H21.07336V36.89373H38.49775a8.3037,8.3037,0,0,0,8.29517-8.29523V11.17416h60.13372Z"
+                        />
+                        <path
+                          class="cls-2"
+                          d="M64.82067,103.63479H37.31734a2.15847,2.15847,0,1,0,0,4.31694H64.82067a2.15847,2.15847,0,1,0,0-4.31694Z"
+                        />
+                        <path
+                          class="cls-2"
+                          d="M35.15887,94.235a2.163,2.163,0,0,0,2.15847,2.15853H90.68272a2.15853,2.15853,0,0,0,0-4.31706H37.31734A2.15649,2.15649,0,0,0,35.15887,94.235Z"
+                        />
+                        <path
+                          class="cls-2"
+                          d="M45.33184,53.8263l1.02881,5.30307a6.73963,6.73963,0,0,0,13.23125,0l1.02881-5.30307a7.09933,7.09933,0,0,0-7.03341-8.056H52.36525A7.09933,7.09933,0,0,0,45.33184,53.8263Z"
+                        />
+                        <path
+                          class="cls-2"
+                          d="M52.97631,73.53253l-6.89219-6.89219-7.18288,2.55109a2.002,2.002,0,0,0-1.28842,1.47043l-2.454,11.549H70.79369l-2.454-11.549a2.00193,2.00193,0,0,0-1.28842-1.47043l-7.18288-2.55109Z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- * Right Side Coder Image -->
+            <div class="w-[560px] -xmd:hidden">
+              <img
+                class="max-w-[540px] -1xl:ml-4"
+                src="./images/for-web.png"
+                alt="CCM Logo"
+              />
+            </div>
+          </header>
+        </div>
+      </section>
+
+      <!-- * ABOUT SECTION -->
+      <!-- * --------------------------------------------- * -->
+      <!-- * --------------------------------------------- * -->
+      <!-- * --------------------------------------------- * -->
+      <section id="about" class="bg-[#f3fff2] xmd:px-36 -xmd:px-6 xmd:py-24 -xmd:pb-16 xmd:flex">
+
+        <div class="xmd:w-[135rem] h-auto pt-10">
+          <img src="./images/codePic.jpg" alt="An image of code">
+        </div>
+
+        <div class="xmd:pl-28">
+          <h1 class="text-4xl pb-4 -xmd:pt-6">About Me</h1>
+          <p class="text-base pl-3">
+            Hi there, my name is Kevin and I am a full-stack developer with 4 years of experience. I consider myself to be a systems thinker, meaning I don't identify as a particular frontend/backend engineer. I am more interested in solving problems holistically. Being resourceful is very important to me as this helps me achieve a “get things done” mentality no matter what the circumstance may be. If I don't don't understand something I am very quick determine what to do to push forward. 
+          </p>
+          <br >
+          <p class="text-base pl-3">
+            I would consider myself somewhat of a bookworm person, most likely due to my enthusiasm for epic fantasy novels like the Starlight Archive to mystery books like the Sherlock Holmes Novels. I am also very fascinated by philosophy and the idea of stoicism. Other hobbies may include playing the violin, light gaming, mentoring, and meeting new people. </p>
+          </p>
+        </div>
+
+      </section>
+
+      <!-- <section class="bg-[#f2f2f2] text-center">
+        <h1 class="text-3xl">
+          Technologies, Tools, and Languages I Am Familiar With
+        </h1>
+        <div class="flex justify-center">
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">HTML5</p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">CSS/SCSS</p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">TailwindCSS</p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Redux</p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2"></p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2"></p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2"></p>
+          <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2"></p>
+        </div>
+      </section> -->
+
+      <!-- * RECENT WORK SECTION -->
+      <!-- * --------------------------------------------- * -->
+      <!-- * --------------------------------------------- * -->
+      <!-- * --------------------------------------------- * -->
+      <section id="projects" class="bg-[#c7f7c5]">
+
+        <header class="xmd:px-20 pt-12">
+          <h1 class="text-7xl text-center font-medium">Recent Work</h1>
+          <div class="pb-6 mt-12">
+            <hr class="border-[#95A5A6] border-[1px] mt-2"/>
+            <hr class="border-[#95A5A6] border-[1.5px] mt-4 w-24 mx-auto"/>
+          </div>
+        <header/>
+
+        <article class="pb-8">
+          <h1 class="text-5xl text-center mb-12">Film City Movies</h1>
+          <section class="xmd:flex ">
   
-</body>
+            <summary class="list-none">
+              <figure>
+                <img class="w-full xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/firstImage.jpeg" alt="CCM Logo">
+              </figure>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 -xmd:mt-4">Project Brief</h4>
+                <p>Designed and developed an e-commerce web application that provides information about on-demand products for customers, giving them the ability to add them to the cart, place orders, and pay for them using PayPal or Credit Card, while keeping track of their shipments.</p>
+              </section>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 mt-6">Implementation</h4>
+                <p style="padding:0px;margin:0px;">-Integrated the application with PayPal’s API to provide credit/debit card payments through secure channels</p>
+                <p style="padding:0px;margin:0px;">-Designed and developed a custom shopping cart and other features using React, Redux, Node.js, React Hooks, and other modern
+                  practices that automated operations and workflows</p>
+                <p style="padding:0px;margin:0px;">-Implemented a file upload system using Node.js that handles attachments properly and securely, preventing breaches and other issues</p>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="text-4xl -xmd:mt-4 mt-4">View Project</h4>
+                <div>
+                  <a href="https://github.com/kevinlens/Film-City" class="button1">Source Code</a>
+                  <a href="https://splendorous-cascaron-185ceb.netlify.app/" class="button1">Live Demo</a>
+                </div>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="mb-4 text-3xl">Technologies:</h4>
+                <div class="flex">
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Redux</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">TailwindCSS</p>
+                </div>
+              </section>
+              <section class="w-full pr-4">
+                <img class="mr-2 -xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/searchQuery.png" alt="CCM Logo">
+              </section>
+              <section class="w-full pr-4 mt-4">
+                <img class="-xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/dashboard.png" alt="CCM Logo">
+              </section>
+            </summary>
+            <div>
+              <figure>
+                <img class="w-full -xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/firstImage.jpeg" alt="CCM Logo">
+              </figure>
+              <figure class="mt-4 -xmd:hidden">
+                <img src="./images/settings.png" style="box-shadow:6px 6px 6px 6px #b2bec3;"  alt="CCM Logo">
+              </figure>
+            </div>
+
+          </section>
+
+        </article>
+        <hr class="border-[#95A5A6] border-[1px] mt-2 mb-6"/>
+
+        <article class="pb-8">
+          <h1 class="text-5xl text-center mb-12 -xmd:mt-4">The Washington Post</h1>
+          <section class="flex">
+  
+            <summary class="list-none">
+              <figure>
+                <img class="w-full xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/news.png" alt="CCM Logo">
+              </figure>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 -xmd:mt-4">Project Brief</h4>
+                <p>Designed and developed an e-commerce web application that provides information about on-demand products for customers, giving them the ability to add them to the cart, place orders, and pay for them using PayPal or Credit Card, while keeping track of their shipments.</p>
+              </section>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 mt-6">Implementation</h4>
+                <p style="padding:0px;margin:0px;">-Integrated the application with PayPal’s API to provide credit/debit card payments through secure channels</p>
+                <p style="padding:0px;margin:0px;">-Designed and developed a custom shopping cart and other features using React, Redux, Node.js, React Hooks, and other modern
+                  practices that automated operations and workflows</p>
+                <p style="padding:0px;margin:0px;">-Implemented a file upload system using Node.js that handles attachments properly and securely, preventing breaches and other issues</p>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="text-4xl mb-2 mt-6">View Project</h4>
+                <div>
+                  <a href="https://github.com/kevinlens/Guardian-News-App" class="button1">Source Code</a>
+                  <a href="https://shimmering-malabi-7d388b.netlify.app/" class="button1">Live Demo</a>
+                </div>
+              </section>
+              <section class="mb-4 -xmd:px-4">
+                <h4 class="mb-4 text-3xl">Technologies:</h4>
+                <div class="flex">
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Redux</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Scss / Grid</p>
+                </div>
+              </section>
+              <section class="w-full pr-4 -xmd:hidden">
+                <img src="./images/secondNews.png" style="box-shadow:6px 6px 6px 6px #b2bec3;"  alt="CCM Logo">
+              </section>
+            </summary>
+            
+            <figure>
+              <img class="w-full -xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/news.png" alt="CCM Logo">
+            </figure>
+
+          </section>
+        </article>
+        <hr class="border-[#95A5A6] border-[1px] mt-2 mb-6"/>
+
+        <article class="pb-8">
+          <h1 class="text-5xl text-center mb-12 ">UNIQLO-USA</h1>
+          <section class="flex">
+  
+            <summary class="list-none">
+                          
+            <figure>
+              <img class="w-full xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/clothing3.png" alt="CCM Logo">
+            </figure>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 -xmd:mt-4">Project Brief</h4>
+                <p>Designed and developed an e-commerce web application that provides information about on-demand products for customers, giving them the ability to add them to the cart, place orders, and pay for them using PayPal or Credit Card, while keeping track of their shipments.</p>
+              </section>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 mt-6">Implementation</h4>
+                <p style="padding:0px;margin:0px;">-Integrated the application with PayPal’s API to provide credit/debit card payments through secure channels</p>
+                <p style="padding:0px;margin:0px;">-Designed and developed a custom shopping cart and other features using React, Redux, Node.js, React Hooks, and other modern
+                  practices that automated operations and workflows</p>
+                <p style="padding:0px;margin:0px;">-Implemented a file upload system using Node.js that handles attachments properly and securely, preventing breaches and other issues</p>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="text-4xl mb-2 mt-6">View Project</h4>
+                <div>
+                  <a href="https://github.com/kevinlens/UNIQLO-US" class="button1">Source Code</a>
+                  <a href="https://remarkable-alfajores-6829b5.netlify.app/" class="button1">Live Demo</a>
+                </div>
+              </section>
+              <section class="mb-4 -xmd:px-4">
+                <h4 class="mb-4 text-3xl">Technologies:</h4>
+                <div class="flex">
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">TailwindCSS</p>
+                </div>
+              </section>
+              <section class="w-full pr-4 -xmd:hidden" >
+                <img src="./images/clothing1.png" style="box-shadow:6px 6px 6px 6px #b2bec3;"  alt="CCM Logo">
+              </section>
+              <section class="w-full pr-4 -xmd:hidden" >
+                <img src="./images/clothing2.png" style="box-shadow:6px 6px 6px 6px #b2bec3;" alt="CCM Logo">
+              </section>
+            </summary>
+            
+            <figure>
+              <img class="w-full -xmd:hidden" style="box-shadow:6px 6px 6px 6px #b2bec3;" src="./images/clothing3.png" alt="CCM Logo">
+            </figure>
+
+          </section>
+        </article>
+
+      </section>
+
+      <section class="bg-[#c7f7c5]">
+
+        <header class="xmd:px-20 pt-12">
+          <h1 class="text-7xl text-center font-medium">Past Projects</h1>
+          <div class="pb-6 mt-12">
+            <hr class="border-[#95A5A6] border-[1px] mt-2"/>
+            <hr class="border-[#95A5A6] border-[1.5px] mt-4 w-24 mx-auto"/>
+          </div>
+        <header/>
+
+        <article class="pb-8">
+          <h1 class="text-5xl text-center mb-12 mt-6">Proshop E-Commerce</h1>
+          <section class="flex">
+  
+            <summary class="list-none">
+              <section class="pr-20 -xmd:px-4">
+                <h4 class="text-4xl mb-4">Project Brief</h4>
+                <p>Designed and developed an e-commerce web application that provides information about on-demand products for customers, giving them the ability to add them to the cart, place orders, and pay for them using PayPal or Credit Card, while keeping track of their shipments.</p>
+              </section>
+              <section class="pr-20 -xmd:px-4"> 
+                <h4 class="text-4xl mb-4 mt-6">Implementation</h4>
+                <p style="padding:0px;margin:0px;">-Integrated the application with PayPal’s API to provide credit/debit card payments through secure channels</p>
+                <p style="padding:0px;margin:0px;">-Designed and developed a custom shopping cart and other features using React, Redux, Node.js, React Hooks, and other modern
+                  practices that automated operations and workflows</p>
+                <p style="padding:0px;margin:0px;">-Implemented a file upload system using Node.js that handles attachments properly and securely, preventing breaches and other issues</p>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="text-4xl mb-2 mt-6">View Project</h4>
+                <div>
+                  <!-- <a href="https://proshopwebapplication.herokuapp.com/" class="button1">Live Demo</a> -->
+                  <a href="https://github.com/kevinlens/ProShop-eCommerce" class="button1">Source Code</a>
+                </div>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="mb-4 text-3xl">Technologies:</h4>
+                <div class="flex">
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Redux</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Node.js</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">MongoDB</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Express</p>
+                </div>
+              </section>
+            </summary>
+            
+            <figure>
+              <img class="w-full -xmd:hidden" style="box-shadow:6px 6px 6px  #b2bec3;" src="./images/proshop.png" alt="CCM Logo">
+            </figure>
+
+          </section>
+          
+          <section class="w-full mx-auto mt-2">
+            <img src="./images/proshop2.jpg" style="box-shadow:6px 6px 6px #b2bec3;" alt="CCM Logo">
+          </section>
+          <section class="w-full mx-auto mt-2">
+            <img src="./images/proshop3.jpg" style="box-shadow:6px 6px 6px #b2bec3;" alt="CCM Logo">            
+          </section>
+
+        </article>
+
+        <hr class="border-[#95A5A6] border-[1px] mt-2 mb-6"/>
+
+        <article class="pb-8">
+          <h1 class="text-5xl text-center mb-12 mt-6">E-Commerce Book Store</h1>
+          <section class="flex">
+  
+            <summary class="list-none">
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4">Project Brief</h4>
+                <p>An e-commerce website that allows customers to buy books depending on filters such as category, programming languages, or price range. Also, they can place orders and pay for them through PayPal or Credit/Debit Cards, as well as tracking them using their account.</p>
+             
+              </section>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 mt-6">Implementation</h4>
+                <p style="padding:0px;margin:0px;">-Implemented a secure payment gateway through PayPal and Credit Card, without exposing credit card data or confidential details</p>
+                <p style="padding:0px;margin:0px;">-Utilized MongoDB and Mongoose to supply a RESTful API, using modern techniques to minimize requests to the back-end through
+                  local storage or other specific, secure, and fast tools</p>
+                <p style="padding:0px;margin:0px;">-Developed an authentication system based on JWT (JSON Web Token), a Node API that follows the MVC architecture, and React reusable components that ensured a high level of scalability and adaptability across multiple environments and devices
+                </p>
+              </section>
+              <section class=" -xmd:px-4 mb-4">
+                <h4 class="text-4xl mb-2 mt-6">View Project</h4>
+                <div>
+                  <!-- <a href="https://proshopwebapplication.herokuapp.com/" class="button1">Live Demo</a> -->
+                  <a href="https://github.com/kevinlens/eCommerce" class="button1">Source Code</a>
+                </div>
+              </section>
+              <section class="-xmd:px-4">
+                <h4 class="mb-4 text-3xl">Technologies:</h4>
+                <div class="flex">
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Node.js</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">MongoDB</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Express</p>
+                </div>
+              </section>
+              <div>
+
+                <figure>
+                  <img class="xmd:hidden" style="box-shadow:6px 6px 6px  #b2bec3;" src="./images/ecommercepic.jpg" alt="CCM Logo">
+                </figure>
+                <figure class="mt-3">
+                  <img class="xmd:hidden" style="box-shadow:6px 6px 6px  #b2bec3;" src="./images/ecommercepic2.jpg" alt="CCM Logo">
+                </figure>
+              </div>
+            </summary>
+            <div>
+
+              <figure>
+                <img class="-xmd:hidden" style="box-shadow:6px 6px 6px  #b2bec3;" src="./images/ecommercepic.jpg" alt="CCM Logo">
+              </figure>
+              <figure class="mt-3">
+                <img class="-xmd:hidden" style="box-shadow:6px 6px 6px  #b2bec3;" src="./images/ecommercepic2.jpg" alt="CCM Logo">
+              </figure>
+            </div>
+
+          </section>
+        
+
+        </article>
+        <hr class="border-[#95A5A6] border-[1px] mt-2 mb-6"/>
+
+        <article class="pb-8">
+          <h1 class="text-5xl text-center mb-12 mt-6">Social Network for Developers</h1>
+          <section class="flex">
+  
+            <summary class="list-none">
+              <section class="pr-10 mb-4 -xmd:px-4">
+                <h4 class="text-4xl mb-4 mt-6">Project Brief</h4>
+                <p>A friendly, innovative, and interactive web application that allows developers around the world to connect and share ideas through blog posts. Developers are able to check other ideas, submit comments, and share their own ideas and opinions that can generate interesting and resourceful discussions.</p>
+              </section>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 mt-6">Implementation</h4>
+                <p style="padding:0px;margin:0px;">-Designed and developed an extensive, highly-scalable, and secure back-end API with Node.js and Express.js</p>
+                <p style="padding:0px;margin:0px;">-Enhanced the API and app security by using JWT (JSON Web Token) to protect routes, endpoints, and the authentication process</p>
+                <p style="padding:0px;margin:0px;">-Developed CRUD-based operations using MongoDB and Mongoose that generated expected results to address business problems</p>
+                <p style="padding:0px;margin:0px;">-Integrated the app with Redux that helped centralize the state without affecting performance or disrupting child components</p>
+                <p style="padding:0px;margin:0px;">-Implemented post-build scripts and deployed the application to Heroku that allowed me to monitor and perform rollbacks if needed</p>
+      
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="text-4xl mb-2 mt-6">View Project</h4>
+                <div>
+                  <!-- <a href="https://proshopwebapplication.herokuapp.com/" class="button1">Live Demo</a> -->
+                  <a href="https://github.com/kevinlens/SocialDev" class="button1">Source Code</a>
+                </div>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="mb-4 text-3xl">Technologies:</h4>
+                <div class="flex">
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Redux</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Node.js</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">MongoDB</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Express</p>
+                </div>
+              </section>
+              <div>
+                <figure>
+                  <img class="xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/socialdev2.jpg" alt="CCM Logo">
+                </figure>
+                <figure class="mt-3">
+                  <img class="xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/socialdev.jpg" alt="CCM Logo">
+                </figure>
+  
+              </div>
+            </summary>
+            
+            <div>
+              <figure>
+                <img class="-xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/socialdev2.jpg" alt="CCM Logo">
+              </figure>
+              <figure class="mt-3">
+                <img class="-xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/socialdev.jpg" alt="CCM Logo">
+              </figure>
+
+            </div>
+
+          </section>
+        
+
+        </article>
+        <hr class="border-[#95A5A6] border-[1px] mt-2 mb-6"/>
+
+        <article class="pb-8">
+          <h1 class="text-5xl text-center mb-12 mt-6">Ordering a Burger</h1>
+          <section class="flex">
+  
+            <summary class="list-none">
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4">Project Brief</h4>
+                <p>Designed for consumer to be able customize their own desired burger for order after the consumer has registered an account. Consumer will be shown the final price and asked for additional information before the order is placed.</p>
+              </section>
+              <section class="pr-10 -xmd:px-4">
+                <h4 class="text-4xl mb-4 mt-6">Implementation</h4>
+                <p style="padding:0px;margin:0px;">-Developed forms and form validation to collect user input.</p>
+                <p style="padding:0px;margin:0px;">-Worked under Redux state management throughout several occasions</p>
+                <p style="padding:0px;margin:0px;">-Managed state with class-based components and React Hooks</p>
+                <p style="padding:0px;margin:0px;">-Planned and produced the styling of React components</p>
+              </section>
+              <section class="-xmd:px-4 mb-4">
+                <h4 class="text-4xl mb-2 mt-6">View Project</h4>
+                <div>
+                  <a href="https://github.com/kevinlens/React-Burger-App" class="button1">Source Code</a>
+                  <a href="https://goofy-wozniak-3f1dfd.netlify.app/" class="button1">Live Demo</a>
+                </div>
+              </section>
+              <section class="-xmd:px-4">
+                <h4 class="mb-4 text-3xl">Technologies:</h4>
+                <div class="flex">
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">React</p>
+                  <p class="border-2 border-current text-[#5e6970] px-2 rounded-full mr-2 mb-2">Redux</p>
+                </div>
+              </section>
+              <div>
+                <figure>
+                  <img class="xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/burgerproject2.png" alt="CCM Logo">
+                </figure>
+                <figure class="mt-3">
+                  <img class="xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/burgerproject.jpg" alt="CCM Logo">
+                </figure>
+              </div>
+            </summary>
+            
+            <div>
+              <figure>
+                <img class="-xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/burgerproject2.png" alt="CCM Logo">
+              </figure>
+              <figure class="mt-3">
+                <img class="-xmd:hidden" style="box-shadow:6px 6px 6px #b2bec3;" src="./images/burgerproject.jpg" alt="CCM Logo">
+              </figure>
+            </div>
+
+          </section>
+        
+
+        </article>
+      </section>
+
+
+
+    </main>
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+
+<script>
+var btn = $('#button');
+
+$(window).scroll(function() {
+if ($(window).scrollTop() > 300) {
+btn.addClass('show');
+} else {
+btn.removeClass('show');
+}
+});
+
+btn.on('click', function(e) {
+e.preventDefault();
+$('html, body').animate({scrollTop:0}, '300');
+});
+
+
+</script>
+  </body>
 </html>
